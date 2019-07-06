@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
-import { routes } from './layout-routes';
 import { RouterModule } from '@angular/router';
-import { LayoutComponent } from './layout.component';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './about.component';
+import { routes } from './about-routes';
 
 @NgModule({
     declarations: [
-        LayoutComponent,
         AboutComponent
     ],
     imports: [
@@ -16,4 +13,4 @@ import { AboutComponent } from './about/about.component';
         RouterModule.forChild(routes)
     ]
 })
-export class LayoutModule { }
+export class AboutModule { }
