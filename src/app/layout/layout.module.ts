@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { routes } from './layout-routes';
 import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+import { HeaderModule } from 'src/shared/header/header.module';
 
 @NgModule({
     declarations: [
@@ -10,7 +11,8 @@ import { LayoutComponent } from './layout.component';
     ],
     imports: [
         CommonModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        HeaderModule
     ]
 })
 export class LayoutModule { }
