@@ -1,3 +1,9 @@
-img {
-  width: 90px;
+.navbar {
+  border-bottom: 2px solid #ebebeb;
+  .navbar-toggler {
+    border-color: transparent;
+  }
+  img {
+    width: 90px;
+  }
 }
