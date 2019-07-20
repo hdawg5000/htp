@@ -1,30 +1,18 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col">
-            <img src="assets/man_on_a_boat.jpg" alt="man on a boat">
+<div class="carousel-container">
+    <ngb-carousel showNavigationArrows="showNavigationArrows" showNavigationIndicators="showNavigationIndicators">
+        <div *ngIf="!isMobile">
+            <ng-template ngbSlide *ngFor="let image of images">
+                <div class="picsum-img-wrapper">
+                    <img [src]="image[0]" [alt]="image[1]">
+                </div>
+            </ng-template>
         </div>
-        <div class="col-md-1"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col">
-            <img src="assets/man_on_tracks.jpg" alt="man on tracks">
+        <div *ngIf="isMobile">
+            <ng-template ngbSlide *ngFor="let image of mobileImages">
+                <div *ngIf="isMobile" class="picsum-img-wrapper">
+                    <img [src]="image[0]" [alt]="image[1]">
+                </div>
+            </ng-template>
         </div>
-        <div class="col-md-1"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col">
-            <img src="assets/jars_on_a_table.jpg" alt="jars on a table">
-        </div>
-        <div class="col-md-1"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col">
-            <img src="assets/two_men_and_baby.jpg" alt="two men and a baby">
-        </div>
-        <div class="col-md-1"></div>
-    </div>
+    </ngb-carousel>
 </div>

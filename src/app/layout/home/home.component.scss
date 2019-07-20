@@ -1,9 +1,9 @@
-.container {
-    margin-top: 3rem;
-    .row {
-      margin: 2rem 0;
-      img {
-        width: 100%;
-      }
-    }
+.carousel-container {
+  margin: 0 auto;
+  max-width: 850px;
+  img {
+    display: block;
+    width: 100%;
+    max-width: inherit;
+  }
 }
