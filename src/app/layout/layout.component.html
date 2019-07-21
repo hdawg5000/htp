@@ -1,39 +1,47 @@
-<header>
-    <nav class="navbar navbar-expand-sm navbar-light header">
-        <a class="navbar-brand" routerLink="/">
-            <img src="assets/logo-2.png" alt="HTP Logo" data-toggle="collapse" data-target=".navbar-collapse.show">
-        </a>
+<div class="page">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light header">
+            <a class="navbar-brand" routerLink="/">
+                <img src="assets/logo-2.png" alt="HTP Logo" data-toggle="collapse" data-target=".navbar-collapse.show">
+            </a>
 
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-            aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+                aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
 
-        <!-- Collapsible content -->
-        <div routerLinkActive="active-link" class="collapse navbar-collapse" id="navbarSupportedContent15">
+            <!-- Collapsible content -->
+            <div routerLinkActive="active-link" class="collapse navbar-collapse" id="navbarSupportedContent15">
 
-            <!-- Links -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
-                    data-target=".navbar-collapse.show">
-                    <a class="nav-link text-center" routerLink="/about">About</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
-                    data-target=".navbar-collapse.show">
-                    <a class="nav-link text-center" routerLink="/contact">Contact</a>
-                </li>
-            </ul>
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                        data-target=".navbar-collapse.show">
+                        <a class="nav-link text-center" routerLink="/about">About</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                        data-target=".navbar-collapse.show">
+                        <a class="nav-link text-center" routerLink="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+    <footer>
+        <div class="text-center">
+            <div class="social-media-link">
+                <a href="https://www.instagram.com/hammadtakespics" target="_blank">
+                    <i class="fa fa-3x fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="social-media-link">
+                <a href="https://www.instagram.com/hammadtakespics" target="_blank">
+                    <i class="fa fa-3x fa-facebook-square" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-    </nav>
-</header>
-<router-outlet></router-outlet>
-<footer>
-    <nav class="navbar navbar-bottom footer">
-        <a href="https://www.instagram.com/hammadtakespics" target="_blank">
-            <i class="fa fa-3x fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.instagram.com/hammadtakespics" target="_blank">
-            <i class="fa fa-3x fa-facebook-square" aria-hidden="true"></i>
-        </a>
-    </nav>
-</footer>
+    </footer>
+</div>
