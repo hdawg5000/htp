@@ -1,4 +1,4 @@
-.navbar {
+.header {
   border-bottom: 2px solid #ebebeb;
   .navbar-toggler {
     border-color: transparent;
@@ -14,5 +14,11 @@
     .active {
       border-bottom: 2px solid #ff5700;
     }
+  }
+}
+.footer {
+  border-top: 2px solid #ebebeb;
+  a {
+    color: #000000;
   }
 }
