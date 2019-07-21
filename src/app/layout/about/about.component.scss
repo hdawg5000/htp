@@ -1,7 +1,10 @@
 .container {
-  margin: 3rem 0;
+  margin-top: 3rem;
   .content {
     margin-top: 3rem;
+    .text {
+      margin-bottom: 2rem;
+    }
     img {
       display: block;
       margin: 0 auto;
