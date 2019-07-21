@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   isMobileView(event?) {
-    console.log('ismobile', window.innerWidth < 576 ? true : false)
     return window.innerWidth < 576 ? true : false
   }
 
