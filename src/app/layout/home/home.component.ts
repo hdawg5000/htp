@@ -4,7 +4,10 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: [
+    './home.component.scss',
+    '../../app.component.scss'
+  ],
   providers: [NgbCarouselConfig]
 })
 export class HomeComponent implements OnInit {
