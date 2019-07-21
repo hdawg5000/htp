@@ -6,11 +6,13 @@
   img {
     width: 90px;
   }
-  .active {
-    border-bottom: 2px solid #ff5700;
-  }
   .nav-link,
   .nav-link:hover {
     color: #000000 !important;
+  }
+  @media (min-width: 576px) {
+    .active {
+      border-bottom: 2px solid #ff5700;
+    }
   }
 }
