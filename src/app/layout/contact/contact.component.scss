@@ -1,7 +1,10 @@
 .container {
   margin-top: 3rem;
   margin-bottom: 3rem;
-  textarea {
-    resize: none;
+  .content {
+    margin-top: 2rem;
+    textarea {
+      resize: none;
+    }
   }
 }
