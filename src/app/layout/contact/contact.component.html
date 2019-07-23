@@ -17,7 +17,8 @@
                     <textarea formControlName="message" class="form-control" id="message" rows="5"></textarea>
                 </div>
                 <div class="text-center">
-                    <button [disabled]="!contactForm.valid" type="submit" class="btn btn-primary">Submit</button>
+                    <button [disabled]="!contactForm.valid || submitted" type="submit"
+                        class="btn btn-primary">Send</button>
                 </div>
             </form>
         </div>
