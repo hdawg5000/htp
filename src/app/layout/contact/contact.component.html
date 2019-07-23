@@ -3,21 +3,21 @@
         <div class="col-1 col-md-3"></div>
         <div class="col-10 col-md-6">
             <h1 class="text-center">Let's Talk</h1>
-            <form class="content">
+            <form [formGroup]="contactForm" (ngSubmit)="sendMessage()" class="content">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input class="form-control" type="text" id="name">
+                    <input formControlName="name" class="form-control" type="text" id="name">
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input class="form-control" type="email" id="email">
+                    <input formControlName="email" class="form-control" type="email" id="email">
                 </div>
                 <div class=" form-group">
                     <label for="message">Your message</label>
-                    <textarea class="form-control" id="message" rows="5"></textarea>
+                    <textarea formControlName="message" class="form-control" id="message" rows="5"></textarea>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button [disabled]="!contactForm.valid" type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>

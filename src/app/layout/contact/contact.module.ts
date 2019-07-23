@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './contact.component';
 import { routes } from './contact-routes';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -10,7 +11,8 @@ import { routes } from './contact-routes';
     ],
     imports: [
         CommonModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        ReactiveFormsModule,
     ]
 })
 export class ContactModule { }
