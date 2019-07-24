@@ -48,10 +48,6 @@ export class ContactComponent implements OnInit, OnDestroy {
     const email = this.contactForm.value.email
     const message = this.contactForm.value.message
 
-    console.log('name', name)
-    console.log('email', email)
-    console.log('message', message)
-
     if (name.length && email.length && message.length) {
       this.http.post('http://localhost:3000/api/send', {
         name,
@@ -65,7 +61,6 @@ export class ContactComponent implements OnInit, OnDestroy {
           } else {
 
           }
-          console.log(res)
           this.submitted = false
         })
     }
