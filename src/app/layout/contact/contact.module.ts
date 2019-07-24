@@ -5,6 +5,7 @@ import { ContactComponent } from './contact.component';
 import { routes } from './contact-routes';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
         RouterModule.forChild(routes),
         ReactiveFormsModule,
         HttpClientModule,
+        MatSnackBarModule
     ]
 })
 export class ContactModule { }

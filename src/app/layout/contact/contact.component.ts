@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Subscription, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators'
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface SendEmailResponse {
   status: boolean,
@@ -23,8 +24,8 @@ export class ContactComponent implements OnInit, OnDestroy {
   private subs: Subject<Subscription> = new Subject()
   public submitted: boolean = false
 
-  constructor(
-    private http: HttpClient) {
+  constructor(private http: HttpClient,
+    private snackBar: MatSnackBar) {
 
     this.contactForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
@@ -58,11 +59,12 @@ export class ContactComponent implements OnInit, OnDestroy {
         .subscribe((res: SendEmailResponse) => {
           if (res.status) {
             this.contactForm.reset()
-          } else {
-
-          }
+            this.snackBar.open('Message sent', 'Close', { duration: 3000 })
+          } else
+            this.snackBar.open('Something went wrong. Please try again later', 'Close', { duration: 3000 })
           this.submitted = false
-        })
+        },
+          (err) => this.snackBar.open('Something went wrong. Please try again later', 'Close', { duration: 3000 }))
     }
   }
 
