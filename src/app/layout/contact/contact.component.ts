@@ -49,7 +49,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     const message = this.contactForm.value.message
 
     if (name.length && email.length && message.length) {
-      this.http.post('http://localhost:3000/api/send', {
+      this.http.post('https://api.hammadtakespics.com/send', {
         name,
         email,
         message
