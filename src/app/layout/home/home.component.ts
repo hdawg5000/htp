@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   public isMobile: boolean
   public showNavigationArrows = false
   public showNavigationIndicators = false
+  public pauseOnHover = false
   public images = [
     ['assets/images/man_on_a_boat.jpg', 'Man on a boat'],
     ['assets/images/man_on_tracks.jpg', 'Man on tracks'],

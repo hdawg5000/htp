@@ -1,5 +1,6 @@
 <div class="carousel-container">
-    <ngb-carousel showNavigationArrows="showNavigationArrows" showNavigationIndicators="showNavigationIndicators">
+    <ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators"
+        [pauseOnHover]="pauseOnHover">
         <div *ngIf="!isMobile">
             <ng-template ngbSlide *ngFor="let image of images">
                 <div class="picsum-img-wrapper">
