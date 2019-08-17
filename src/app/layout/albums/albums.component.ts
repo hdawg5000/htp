@@ -19,11 +19,11 @@ export class AlbumsComponent implements OnInit {
   ngOnInit() {
     this.albums = [
       {
-        albumTitle: "Dubai",
+        albumTitle: "Album title",
         albumCoverPhotoLink: "assets/images/logo-2.png"
       },
       {
-        albumTitle: "Dubai",
+        albumTitle: "Album title",
         albumCoverPhotoLink: "assets/images/logo-2.png"
       }
     ]
